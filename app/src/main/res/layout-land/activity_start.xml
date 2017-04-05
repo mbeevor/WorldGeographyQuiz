@@ -1,53 +1,47 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".StartActivity">
+    android:layout_height="wrap_content">
 
-
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".StartActivity">
 
         <ImageView
             android:id="@+id/top_image"
-            style="@style/top_image"
+            style="@style/top_image_land"
             android:src="@drawable/hungarymap" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            style="@style/title"
+            android:text="@string/welcome" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/sub_title"
+            style="@style/sub_title"
+            android:text="@string/welcome_two" />
 
-            <TextView
-                android:id="@+id/title"
-                style="@style/title"
-                android:text="@string/welcome" />
+        <TextView
+            android:id="@+id/question"
+            style="@style/question"
+            android:text="@string/player_name" />
 
-            <TextView
-                android:id="@+id/sub_title"
-                style="@style/sub_title"
-                android:text="@string/welcome_two" />
+        <EditText
+            android:id="@+id/text_answer"
+            style="@style/text_answer"
+            android:hint="@string/name_hint" />
 
-            <TextView
-                android:id="@+id/question"
-                style="@style/question"
-                android:text="@string/player_name" />
+        <Button
+            android:id="@+id/submit"
+            style="@style/submit"
+            android:onClick="startQuiz"
+            android:text="@string/submit" />
 
-            <EditText
-                android:id="@+id/text_answer"
-                style="@style/text_answer"
-                android:hint="@string/name_hint" />
 
-            <Button
-                android:id="@+id/submit"
-                style="@style/submit"
-                android:text="@string/submit" />
-
-        </RelativeLayout>
-
-    </ScrollView>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

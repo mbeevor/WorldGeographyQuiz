@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -32,13 +33,14 @@
             android:text="@string/player_name"/>
 
         <EditText
-            android:id="@+id/text_answer"
+            android:id="@+id/player_name"
             style="@style/text_answer"
             android:hint="@string/name_hint"/>
 
         <Button
             android:id="@+id/submit"
             style="@style/submit"
+            android:onClick="startQuiz"
             android:text="@string/submit"/>
 
     </RelativeLayout>

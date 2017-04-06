@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -11,28 +12,24 @@
         tools:context=".StartActivity">
 
         <ImageView
-            android:id="@+id/top_image"
-            style="@style/top_image_land"
+            style="@style/top_image"
             android:src="@drawable/hungarymap" />
 
         <TextView
-            android:id="@+id/title"
             style="@style/title"
             android:text="@string/welcome" />
 
         <TextView
-            android:id="@+id/sub_title"
             style="@style/sub_title"
             android:text="@string/welcome_two" />
 
         <TextView
-            android:id="@+id/question"
             style="@style/question"
             android:text="@string/player_name" />
 
         <EditText
             android:id="@+id/player_name"
-            style="@style/text_answer"
+            style="@style/answer"
             android:hint="@string/name_hint" />
 
         <Button

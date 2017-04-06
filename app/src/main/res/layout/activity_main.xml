@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
+
+    <ImageView
+        style="@style/top_image"
+        android:src="@drawable/hungarymap" />
 
     <TextView
         android:id="@+id/start"
         style="@style/sub_title"
-        android:text="" />
+        android:text="@string/begin" />
+
+    <TextView
+        android:id="@+id/question_one"
+        style="@style/question"
+        android:text="@string/question_one" />
+
+    <CheckBox
+        android:id="@+id/question_one_answer_a"
+        style="@style/answer"
+        android:text="@string/question_one_answer_a" />
+
+    <CheckBox
+        android:id="@+id/question_one_answer_b"
+        style="@style/answer"
+        android:text="@string/question_one_answer_b" />
+
+    <CheckBox
+        android:id="@+id/question_one_answer_c"
+        style="@style/answer"
+        android:text="@string/question_one_answer_c" />
+
+    <CheckBox
+        android:id="@+id/question_one_answer_d"
+        style="@style/answer"
+        android:text="@string/question_one_answer_d" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <Button
+            android:id="@+id/submit"
+            style="@style/submit"
+            android:onClick="submit"
+            android:text="@string/submit" />
+
+    </RelativeLayout>
 
 </LinearLayout>

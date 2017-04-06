@@ -1,9 +1,22 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">World Geography Quiz</string>
     <string name="welcome">What is the capital of Moldova?</string>
     <string name="welcome_two">And other geography questions.</string>
     <string name="player_name">Enter your name to begin</string>
     <string name="name_hint">Your Name</string>
+    <string name="entered_name"><xliff:g id="playerName" example="Matthew">%s</xliff:g></string>
     <string name="submit">Submit</string>
+    <string name="hello">Hello</string>
+    <string name="begin">Let us begin...</string>
+
+    <string name="Question_one">This is the first question</string>
+    <string name="Question_one_answer_a">Option one</string>
+    <string name="Question_one_answer_b">Option two</string>
+    <string name="Question_one_answer_c">Option three</string>
+    <string name="Question_one_answer_d">Option four</string>
+
+
+    <string name="Question_ten">And finally - what is the capital of Moldova?</string>
+    <string name="Question_ten_answer">Chisinau</string>
 
 </resources>

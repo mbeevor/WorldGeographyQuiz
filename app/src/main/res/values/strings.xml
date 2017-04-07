@@ -9,12 +9,23 @@
     <string name="hello">Hello</string>
     <string name="begin">Let us begin...</string>
 
+    <string name="score_message">Your current score is </string>
+
     <string name="question_one">This is the first question</string>
     <string name="question_one_answer_a">Correct answer</string>
     <string name="question_one_answer_b">Correct answer</string>
     <string name="question_one_answer_c">Wrong answer</string>
     <string name="question_one_answer_d">Wrong answer</string>
 
+    <string name="question_two">This is the second question</string>
+    <string name="question_two_answer_a">Wrong answer</string>
+    <string name="question_two_answer_b">Wrong answer</string>
+    <string name="question_two_answer_c">Correct answer</string>
+    <string name="question_two_answer_d">Wrong answer</string>
+
+    <string name="question_three">Which country is represented by the letter \'S\' in the acronym \'BRICS\' after Brazil, Russia, India and China?</string>
+    <string name="question_three_answer">South Africa</string>
+    <string name="question_three_hint">Your answer</string>
 
     <string name="question_ten">And finally - what is the capital of Moldova?</string>
     <string name="question_ten_answer">Chisinau</string>

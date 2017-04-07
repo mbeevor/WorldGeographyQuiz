@@ -25,6 +25,13 @@
         <item name="cardCornerRadius">4dp</item>
     </style>
 
+    <style name="card_linear_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
     <style name="title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -63,9 +70,10 @@
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:inputType">textCapSentences</item>
         <item name="android:textColor">@color/secondary_text</item>
     </style>
 
@@ -74,8 +82,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_alignParentRight">true</item>
-        <item name="android:padding">16dp</item>
-        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:layout_margin">24dp</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/primary_text</item>
     </style>

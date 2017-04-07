@@ -1,102 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <ImageView
+        style="@style/top_image"
+        android:src="@drawable/hungarymap" />
 
-        <ImageView
-            style="@style/top_image"
-            android:src="@drawable/hungarymap" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_one"
+        style="@style/card_view">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view_one"
-            style="@style/card_view">
+        <LinearLayout
+            style="@style/card_linear_layout" >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+            <TextView
+                android:id="@+id/start"
+                style="@style/sub_title"
+                android:text="@string/begin" />
 
-                <TextView
-                    android:id="@+id/start"
-                    style="@style/sub_title"
-                    android:text="@string/begin" />
+            <TextView
+                android:id="@+id/question_one"
+                style="@style/question"
+                android:text="@string/question_one" />
 
-                <TextView
-                    android:id="@+id/question_one"
-                    style="@style/question"
-                    android:text="@string/question_one" />
+            <CheckBox
+                android:id="@+id/question_one_answer_a"
+                style="@style/answer"
+                android:text="@string/question_one_answer_a" />
 
-                <CheckBox
-                    android:id="@+id/question_one_answer_a"
-                    style="@style/answer"
-                    android:text="@string/question_one_answer_a" />
+            <CheckBox
+                android:id="@+id/question_one_answer_b"
+                style="@style/answer"
+                android:text="@string/question_one_answer_b" />
 
-                <CheckBox
-                    android:id="@+id/question_one_answer_b"
-                    style="@style/answer"
-                    android:text="@string/question_one_answer_b" />
+            <CheckBox
+                android:id="@+id/question_one_answer_c"
+                style="@style/answer"
+                android:text="@string/question_one_answer_c" />
 
-                <CheckBox
-                    android:id="@+id/question_one_answer_c"
-                    style="@style/answer"
-                    android:text="@string/question_one_answer_c" />
+            <CheckBox
+                android:id="@+id/question_one_answer_d"
+                style="@style/answer"
+                android:text="@string/question_one_answer_d" />
 
-                <CheckBox
-                    android:id="@+id/question_one_answer_d"
-                    style="@style/answer"
-                    android:text="@string/question_one_answer_d" />
+        </LinearLayout>
 
-            </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/questionOneSubmit"
+                style="@style/submit"
+                android:onClick="questionOneSubmit"
+                android:text="@string/submit" />
 
-                <Button
-                    android:id="@+id/submit"
-                    style="@style/submit"
-                    android:onClick="questionOneSubmit"
-                    android:text="@string/submit" />
+        </RelativeLayout>
 
-            </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
-        </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_two"
+        style="@style/card_view">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view_two"
-            style="@style/card_view">
+        <LinearLayout
+            style="@style/card_linear_layout">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:orientation="vertical">
+            <TextView
+                android:id="@+id/question_two"
+                style="@style/question"
+                android:text="@string/question_two" />
 
-                <TextView
-                    android:id="@+id/question_two"
-                    style="@style/question"
-                    android:text="@string/question_one" />
+           <RadioGroup
+               style="@style/card_linear_layout">
 
-                <CheckBox
-                    android:id="@+id/question_two_answer_a"
-                    style="@style/answer"
-                    android:text="@string/question_one_answer_a" />
+               <RadioButton
+                   android:id="@+id/question_two_answer_a"
+                   style="@style/answer"
+                   android:text="@string/question_two_answer_a" />
 
-            </LinearLayout>
+               <RadioButton
+                   android:id="@+id/question_two_answer_b"
+                   style="@style/answer"
+                   android:text="@string/question_two_answer_b"  />
+
+               <RadioButton
+                   android:id="@+id/question_two_answer_c"
+                   style="@style/answer"
+                   android:text="@string/question_two_answer_c"/>
+
+           </RadioGroup>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/questionTwoSubmit"
+                style="@style/submit"
+                android:onClick="questionTwoSubmit"
+                android:text="@string/submit" />
+
+        </RelativeLayout>
 
 
-        </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_three"
+        style="@style/card_view">
+
+        <LinearLayout
+            style="@style/card_linear_layout">
+
+            <TextView
+                android:id="@+id/question_three"
+                style="@style/question"
+                android:text="@string/question_three" />
+
+            <EditText
+                android:id="@+id/question_three_answer"
+                style="@style/answer"
+                android:hint="@string/question_three_hint" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/questionThreeSubmit"
+                style="@style/submit"
+                android:onClick="questionThreeSubmit"
+                android:text="@string/submit" />
+
+        </RelativeLayout>
 
 
-    </LinearLayout>
-</ScrollView>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

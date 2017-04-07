@@ -21,6 +21,12 @@ public class StartActivity extends AppCompatActivity {
         yourName = (EditText) findViewById(R.id.player_name);
     }
 
+    /**
+     * This method is called when the player clicks 'submit' after entering their name.
+     * A warning toast message appears if no text is entered.
+     * The name entered is saved as a new intent to be recalled later.
+     *
+     */
     public void startQuiz(View view) {
         playerName = yourName.getText().toString();
 
@@ -33,11 +39,19 @@ public class StartActivity extends AppCompatActivity {
         startActivity(proceedToMain);
     }
 
+    /**
+     * This method ensures the player's name is saved if the device is rotated.
+     */
+
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString("playerName", playerName);
     }
+
+    /**
+     * This method ensures the player's name is restored from savedInstanceState if the device is rotated.
+     */
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {

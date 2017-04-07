@@ -11,13 +11,25 @@
         style="@style/top_image"
         android:src="@drawable/hungarymap" />
 
-    <TextView
-        style="@style/title"
-        android:text="@string/welcome" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_one"
+        style="@style/card_view">
 
-    <TextView
-        style="@style/sub_title"
-        android:text="@string/welcome_two" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                style="@style/title"
+                android:text="@string/welcome" />
+
+            <TextView
+                style="@style/sub_title"
+                android:text="@string/welcome_two" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
     <TextView
         style="@style/question"
@@ -40,5 +52,6 @@
             android:text="@string/submit" />
 
     </RelativeLayout>
+
 
 </LinearLayout>

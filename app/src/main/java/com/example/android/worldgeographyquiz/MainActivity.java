@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // restores player's name from StartActivity //
         playerName = getIntent().getExtras().getString("playerName");
+        score = 0;
 
         // Identifies all cards when app created //
         cardViewOne = (CardView) findViewById(R.id.card_view_one);
@@ -217,8 +218,27 @@ public class MainActivity extends AppCompatActivity {
             scoreImage.setImageResource(R.drawable.summit);
         }
 
-
     }
+
+//    /**
+//     * This method ensures the player's score is saved if the device is rotated.
+//     */
+//
+//    @Override
+//    protected void onSaveInstanceState(Bundle savedInstanceState) {
+//        super.onSaveInstanceState(savedInstanceState);
+//        savedInstanceState.putInt("Score", score);
+//    }
+//
+//    /**
+//     * This method ensures the player's score is restored from savedInstanceState if the device is rotated.
+//     */
+//
+//    @Override
+//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+//        super.onRestoreInstanceState(savedInstanceState);
+//        score = savedInstanceState.getInt("Score");
+//    }
 
 
 }

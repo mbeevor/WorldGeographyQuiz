@@ -6,6 +6,7 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -164,10 +165,26 @@ public class MainActivity extends AppCompatActivity {
         }
         cardViewSeven.setVisibility(View.GONE);
         cardViewLast.setVisibility(View.VISIBLE);
+
+
         // final String to display final score //
         TextView finalScore = (TextView) findViewById(R.id.result);
-        String summary = getString(R.string.entered_name, playerName) + ", " + getString(R.string.final_score_message) + " " + score + " " + getString(R.string.possible);
-        finalScore.setText(summary);
+        ImageView scoreImage = (ImageView) findViewById(R.id.score_image);
+
+        if (score <= 20) {
+            String summary = getString(R.string.entered_name, playerName) + ", " + getString(R.string.final_score_message) + " " + score + " " + getString(R.string.possible) + "\n" + getString(R.string.worst);
+            finalScore.setText(summary);
+            scoreImage.setImageResource(R.drawable.lost);
+        } else if (score <= 40) {
+            String summary = getString(R.string.entered_name, playerName) + ", " + getString(R.string.final_score_message) + " " + score + " " + getString(R.string.possible) + "\n" + getString(R.string.okay);
+            finalScore.setText(summary);
+            scoreImage.setImageResource(R.drawable.middle);
+        } else if (score <= 70) {
+            String summary = getString(R.string.entered_name, playerName) + ", " + getString(R.string.final_score_message) + " " + score + " " + getString(R.string.possible) + "\n" + getString(R.string.best);
+            finalScore.setText(summary);
+            scoreImage.setImageResource(R.drawable.summit);
+        }
+
 
     }
 

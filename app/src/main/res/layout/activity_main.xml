@@ -28,6 +28,10 @@
                     style="@style/sub_title"
                     android:text="@string/begin" />
 
+                <ImageView
+                    style="@style/card_image"
+                    android:src="@drawable/deutschland" />
+
                 <TextView
                     android:id="@+id/question_one"
                     style="@style/question"
@@ -55,9 +59,7 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout style="@style/relative_layout">
 
                 <Button
                     android:id="@+id/questionOneSubmit"
@@ -74,6 +76,10 @@
             style="@style/card_view">
 
             <LinearLayout style="@style/card_linear_layout">
+
+                <ImageView
+                    style="@style/card_image"
+                    android:src="@drawable/seretse" />
 
                 <TextView
                     android:id="@+id/question_two"
@@ -106,9 +112,7 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout style="@style/relative_layout">
 
                 <Button
                     android:id="@+id/questionTwoSubmit"
@@ -127,6 +131,10 @@
 
             <LinearLayout style="@style/card_linear_layout">
 
+                <ImageView
+                    style="@style/card_image"
+                    android:src="@drawable/leaders" />
+
                 <TextView
                     android:id="@+id/question_three"
                     style="@style/question"
@@ -139,9 +147,7 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout style="@style/relative_layout">
 
                 <Button
                     android:id="@+id/questionThreeSubmit"
@@ -160,6 +166,10 @@
             style="@style/card_view">
 
             <LinearLayout style="@style/card_linear_layout">
+
+                <ImageView
+                    style="@style/card_image"
+                    android:src="@drawable/buddha" />
 
                 <TextView
                     android:id="@+id/question_four"
@@ -192,9 +202,7 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout style="@style/relative_layout">
 
                 <Button
                     android:id="@+id/questionFourSubmit"
@@ -211,6 +219,11 @@
             style="@style/card_view">
 
             <LinearLayout style="@style/card_linear_layout">
+
+
+                <ImageView
+                    style="@style/card_image"
+                    android:src="@drawable/island" />
 
                 <TextView
                     android:id="@+id/question_five"
@@ -243,9 +256,7 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout style="@style/relative_layout">
 
                 <Button
                     android:id="@+id/questionFiveSubmit"
@@ -262,6 +273,10 @@
             style="@style/card_view">
 
             <LinearLayout style="@style/card_linear_layout">
+
+                <ImageView
+                    style="@style/card_image"
+                    android:src="@drawable/mountain" />
 
                 <TextView
                     android:id="@+id/question_six"
@@ -310,9 +325,7 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout style="@style/relative_layout">
 
                 <Button
                     android:id="@+id/questionSixSubmit"
@@ -330,6 +343,10 @@
 
             <LinearLayout style="@style/card_linear_layout">
 
+                <ImageView
+                    style="@style/card_image"
+                    android:src="@drawable/moldova" />
+
                 <TextView
                     android:id="@+id/question_seven"
                     style="@style/question"
@@ -342,9 +359,7 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <RelativeLayout style="@style/relative_layout">
 
                 <Button
                     android:id="@+id/questionSevenSubmit"
@@ -362,6 +377,10 @@
             style="@style/card_view">
 
             <LinearLayout style="@style/card_linear_layout">
+
+                <ImageView
+                    android:id="@+id/score_image"
+                    style="@style/card_image" />
 
                 <TextView
                     android:id="@+id/result"

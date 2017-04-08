@@ -38,7 +38,7 @@
 
     <EditText
         android:id="@+id/player_name"
-        style="@style/answer"
+        style="@style/name_answer"
         android:hint="@string/name_hint" />
 
     <RelativeLayout

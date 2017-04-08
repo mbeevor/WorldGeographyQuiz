@@ -5,13 +5,16 @@
     <string name="player_name">Enter your name to begin</string>
     <string name="name_hint">Your Name</string>
     <string name="entered_name"><xliff:g id="playerName" example="Matthew">%s</xliff:g></string>
-    <string name="submit">Enter</string>
+    <string name="submit">Submit</string>
     <string name="hello">Hello</string>
     <string name="begin">Let us begin...</string>
 
     <string name="score_message">Your current score is </string>
     <string name="final_score_message">Your final score is: </string>
     <string name="possible">of a possible 70.</string>
+    <string name="best">Well done\! You really know geography</string>
+    <string name="okay">Good job\, maybe have another go\?</string>
+    <string name="worst">Perhaps geography isn\'t for you.</string>
 
     <string name="question_one">Which of the following countries share a border with Germany?</string>
     <string name="question_one_answer_a">Denmark</string>

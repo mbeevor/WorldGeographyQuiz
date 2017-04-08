@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
     CardView cardViewOne;
     CardView cardViewTwo;
     CardView cardViewThree;
+    CardView cardViewFour;
+    CardView cardViewFive;
+    CardView cardViewSix;
+    CardView cardViewSeven;
+    CardView cardViewLast;
 
     /**
      * Start of quiz - starting with score of zero.
@@ -31,15 +36,26 @@ public class MainActivity extends AppCompatActivity {
         cardViewOne = (CardView) findViewById(R.id.card_view_one);
         cardViewTwo = (CardView) findViewById(R.id.card_view_two);
         cardViewThree = (CardView) findViewById(R.id.card_view_three);
+        cardViewFour = (CardView) findViewById(R.id.card_view_four);
+        cardViewFive = (CardView) findViewById(R.id.card_view_five);
+        cardViewSix = (CardView) findViewById(R.id.card_view_six);
+        cardViewSeven = (CardView) findViewById(R.id.card_view_seven);
+        cardViewLast = (CardView) findViewById(R.id.card_view_last);
         // Hides all cards, except question one //
         cardViewOne.setVisibility(View.VISIBLE);
         cardViewTwo.setVisibility(View.GONE);
         cardViewThree.setVisibility(View.GONE);
+        cardViewFour.setVisibility(View.GONE);
+        cardViewFive.setVisibility(View.GONE);
+        cardViewSix.setVisibility(View.GONE);
+        cardViewSeven.setVisibility(View.GONE);
+        cardViewLast.setVisibility(View.GONE);
 
         // creates new String welcome message that recalls player's name //
         TextView textView = (TextView) findViewById(R.id.start);
         String openingString = getString(R.string.hello) + ", " + getString(R.string.entered_name, playerName) + " " + getString(R.string.begin);
         textView.setText(openingString);
+
     }
 
     /**
@@ -47,65 +63,30 @@ public class MainActivity extends AppCompatActivity {
      */
     public void questionOneSubmit(View view) {
         CheckBox QuestionOneAnswerA = (CheckBox) findViewById(R.id.question_one_answer_a);
-        boolean isQuestionOneAnswerA = QuestionOneAnswerA.isChecked();
         CheckBox QuestionOneAnswerB = (CheckBox) findViewById(R.id.question_one_answer_b);
-        boolean isQuestionOneAnswerB = QuestionOneAnswerB.isChecked();
         CheckBox QuestionOneAnswerC = (CheckBox) findViewById(R.id.question_one_answer_c);
-        boolean isQuestionOneAnswerC = QuestionOneAnswerC.isChecked();
         CheckBox QuestionOneAnswerD = (CheckBox) findViewById(R.id.question_one_answer_d);
-        boolean isQuestionOneAnswerD = QuestionOneAnswerD.isChecked();
-        int questionOneScore = calculateQuestionOneScore(isQuestionOneAnswerA, isQuestionOneAnswerB, isQuestionOneAnswerC, isQuestionOneAnswerD);
+
+        if ((QuestionOneAnswerA.isChecked()) && (!QuestionOneAnswerB.isChecked()) && (QuestionOneAnswerC.isChecked()) && (!QuestionOneAnswerD.isChecked())) {
+            score += 10;
+        }
+        Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
         cardViewOne.setVisibility(View.GONE);
         cardViewTwo.setVisibility(View.VISIBLE);
-        score = score + questionOneScore;
-        Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-    }
-
-    /**
-     * Updates the player's score from answer to question one
-     *
-     * @param QuestionOneAnswerA is if the player selected this option
-     * @param QuestionOneAnswerB is if the player selected this option
-     * @param QuestionOneAnswerC is if the player selected this option
-     * @param QuestionOneAnswerD is if the player selected this option
-     */
-    private int calculateQuestionOneScore(boolean QuestionOneAnswerA, boolean QuestionOneAnswerB, boolean QuestionOneAnswerC, boolean QuestionOneAnswerD) {
-
-        int questionOneScore = 0;
-
-        // correct answer is A and B only//
-        if ((QuestionOneAnswerA) && (QuestionOneAnswerB) && (!QuestionOneAnswerC) && (!QuestionOneAnswerD)) {
-            questionOneScore += 10;
-        }
-        return questionOneScore;
     }
 
     /**
      * This method is called when the player clicks 'submit' on question Two.
      */
     public void questionTwoSubmit(View view) {
-        RadioButton questionTwoAnswerC = (RadioButton) findViewById(R.id.question_two_answer_c);
-        boolean isQuestionTwoAnswerC = questionTwoAnswerC.isChecked();
-        int questionTwoScore = calculateQuestionTwoScore(isQuestionTwoAnswerC);
+        RadioButton questionTwoAnswerB = (RadioButton) findViewById(R.id.question_two_answer_b);
+        if (questionTwoAnswerB.isChecked()) {
+            score += 10;
+        }
+        Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
+
         cardViewTwo.setVisibility(View.GONE);
         cardViewThree.setVisibility(View.VISIBLE);
-        score = score + questionTwoScore;
-        Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-    }
-
-    /**
-     * Updates the player's score from answer to question two
-     *
-     * @param QuestionTwoAnswerC is the correct answer
-     */
-    private int calculateQuestionTwoScore(boolean QuestionTwoAnswerC) {
-
-        int questionTwoScore = 0;
-
-        if (QuestionTwoAnswerC) {
-            questionTwoScore += 10;
-        }
-        return questionTwoScore;
     }
 
     /**
@@ -114,37 +95,81 @@ public class MainActivity extends AppCompatActivity {
     public void questionThreeSubmit(View view) {
 
         EditText answerEditText = (EditText) findViewById(R.id.question_three_answer);
-
+        if (answerEditText.getText().toString().equals(getString(R.string.question_three_answer))) {
+            score += 10;
+        }
+        Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
+        cardViewThree.setVisibility(View.GONE);
+        cardViewFour.setVisibility(View.VISIBLE);
     }
 
     /**
-     * Updates the player's score from answer to question three
-     *
+     * This method is called when the player clicks 'submit' on question Four.
      */
-    private int calculateQuestionThreeScore(){
-
-        int questionThreeScore = 0;
-
-
-        if (.equals(getString(R.string.question_three_answer))) {
-            questionThreeScore += 10;
+    public void questionFourSubmit(View view) {
+        RadioButton questionFourAnswerA = (RadioButton) findViewById(R.id.question_four_answer_a);
+        if (questionFourAnswerA.isChecked()) {
+            score += 10;
         }
+        Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
 
+        cardViewFour.setVisibility(View.GONE);
+        cardViewFive.setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * This method is called when the player clicks 'submit' on question Five.
+     */
+    public void questionFiveSubmit(View view) {
+        RadioButton questionFiveAnswerB = (RadioButton) findViewById(R.id.question_five_answer_b);
+        if (questionFiveAnswerB.isChecked()) {
+            score += 10;
+        }
+        Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
+
+        cardViewFive.setVisibility(View.GONE);
+        cardViewSix.setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * This method is called when the player clicks 'submit' on question Six.
+     */
+    public void questionSixSubmit(View view) {
+        CheckBox QuestionSixAnswerA = (CheckBox) findViewById(R.id.question_six_answer_a);
+        CheckBox QuestionSixAnswerB = (CheckBox) findViewById(R.id.question_six_answer_b);
+        CheckBox QuestionSixAnswerC = (CheckBox) findViewById(R.id.question_six_answer_c);
+        CheckBox QuestionSixAnswerD = (CheckBox) findViewById(R.id.question_six_answer_d);
+        CheckBox QuestionSixAnswerE = (CheckBox) findViewById(R.id.question_six_answer_e);
+        CheckBox QuestionSixAnswerF = (CheckBox) findViewById(R.id.question_six_answer_f);
+        CheckBox QuestionSixAnswerG = (CheckBox) findViewById(R.id.question_six_answer_g);
+        CheckBox QuestionSixAnswerH = (CheckBox) findViewById(R.id.question_six_answer_h);
+
+        if ((QuestionSixAnswerA.isChecked()) && (!QuestionSixAnswerB.isChecked()) && (QuestionSixAnswerC.isChecked()) && (!QuestionSixAnswerD.isChecked())
+                && (!QuestionSixAnswerE.isChecked()) && (QuestionSixAnswerF.isChecked()) && (QuestionSixAnswerG.isChecked()) && (!QuestionSixAnswerH.isChecked())) {
+            score += 10;
+        }
+        Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
+        cardViewSix.setVisibility(View.GONE);
+        cardViewSeven.setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * This method is called when the player clicks 'submit' on question Seven.
+     */
+    public void questionSevenSubmit(View view) {
+
+        EditText answerEditText = (EditText) findViewById(R.id.question_seven_answer);
+        if (answerEditText.getText().toString().equals(getString(R.string.question_seven_answer))) {
+            score += 10;
+        }
+        cardViewSeven.setVisibility(View.GONE);
+        cardViewLast.setVisibility(View.VISIBLE);
+        // final String to display final score //
+        TextView finalScore = (TextView) findViewById(R.id.result);
+        String summary = getString(R.string.entered_name, playerName) + ", " + getString(R.string.final_score_message) + " " + score + " " + getString(R.string.possible);
+        finalScore.setText(summary);
 
     }
 
-    //USE below for final card to display final score //
-//
-//    private String scoreSummary(int score) {
-//        String summary = "your score is " + score;
-//        return summary;
-//    }
-//
-//    private void displayMessage(String message) {
-//        TextView scoreTextView = (TextView) findViewById(R.id.current_score);
-//        scoreTextView.setText(message);
-//    }
-//
-//
 
 }

@@ -5,29 +5,53 @@
     <string name="player_name">Enter your name to begin</string>
     <string name="name_hint">Your Name</string>
     <string name="entered_name"><xliff:g id="playerName" example="Matthew">%s</xliff:g></string>
-    <string name="submit">Submit</string>
+    <string name="submit">Enter</string>
     <string name="hello">Hello</string>
     <string name="begin">Let us begin...</string>
 
     <string name="score_message">Your current score is </string>
+    <string name="final_score_message">Your final score is: </string>
+    <string name="possible">of a possible 70.</string>
 
-    <string name="question_one">This is the first question</string>
-    <string name="question_one_answer_a">Correct answer</string>
-    <string name="question_one_answer_b">Correct answer</string>
-    <string name="question_one_answer_c">Wrong answer</string>
-    <string name="question_one_answer_d">Wrong answer</string>
+    <string name="question_one">Which of the following countries share a border with Germany?</string>
+    <string name="question_one_answer_a">Denmark</string>
+    <string name="question_one_answer_b">Lithuania</string>
+    <string name="question_one_answer_c">Luxembourg</string>
+    <string name="question_one_answer_d">Slovakia</string>
 
-    <string name="question_two">This is the second question</string>
-    <string name="question_two_answer_a">Wrong answer</string>
-    <string name="question_two_answer_b">Wrong answer</string>
-    <string name="question_two_answer_c">Correct answer</string>
-    <string name="question_two_answer_d">Wrong answer</string>
+    <string name="question_two">Sir Seretse Khama was the first president of which African country?</string>
+    <string name="question_two_answer_a">Angola</string>
+    <string name="question_two_answer_b">Botswana</string>
+    <string name="question_two_answer_c">Ghana</string>
+    <string name="question_two_answer_d">Mozambique</string>
 
     <string name="question_three">Which country is represented by the letter \'S\' in the acronym \'BRICS\' after Brazil, Russia, India and China?</string>
     <string name="question_three_answer">South Africa</string>
     <string name="question_three_hint">Your answer</string>
 
-    <string name="question_ten">And finally - what is the capital of Moldova?</string>
-    <string name="question_ten_answer">Chisinau</string>
+    <string name="question_four">The Buddhas of Bamiyan, destroyed in 2001, were in which country?</string>
+    <string name="question_four_answer_a">Afghanistan</string>
+    <string name="question_four_answer_b">Iran</string>
+    <string name="question_four_answer_c">Mongolia</string>
+    <string name="question_four_answer_d">Syria</string>
+
+    <string name="question_five">Which of these islands is not in the State of Hawaii?</string>
+    <string name="question_five_answer_a">Kaua\'i</string>
+    <string name="question_five_answer_b">Kiribati</string>
+    <string name="question_five_answer_c">Maui</string>
+    <string name="question_five_answer_d">O\'ahu</string>
+
+    <string name="question_six">Which four former US Presidents are carved into the side of Mount Rushmore?</string>
+    <string name="question_six_answer_a">Thomas Jefferson</string>
+    <string name="question_six_answer_b">James Madison</string>
+    <string name="question_six_answer_c">Abraham Lincoln</string>
+    <string name="question_six_answer_d">Richard Nixon</string>
+    <string name="question_six_answer_e">Franklin D Roosevelt</string>
+    <string name="question_six_answer_f">Theodore Roosevelt</string>
+    <string name="question_six_answer_g">George Washington</string>
+    <string name="question_six_answer_h">Woodrow Wilson</string>
+
+    <string name="question_seven">And finally - what is the capital of Moldova?</string>
+    <string name="question_seven_answer">Chisinau</string>
 
 </resources>

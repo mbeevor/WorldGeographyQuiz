@@ -8,12 +8,17 @@
     <string name="submit">Submit</string>
     <string name="hello">Hello</string>
     <string name="begin">Let us begin...</string>
+    <string name="restart">Play Again</string>
+    <string name="share">Share</string>
 
     <string name="score_message">Your current score is </string>
+    <string name="share_subject">Your World Geography Quiz Result</string>
+    <string name="share_message">Your total score was </string>
+    <string name="thanks">Thanks for playing\!</string>
     <string name="final_score_message">Your final score is: </string>
     <string name="possible">of a possible 70.</string>
-    <string name="best">Well done\! You really know geography</string>
-    <string name="okay">Good job\, maybe have another go\?</string>
+    <string name="best">Well done\! You really know your geography\!</string>
+    <string name="okay">Good job\ - maybe have another go\?</string>
     <string name="worst">Perhaps geography isn\'t for you.</string>
 
     <string name="question_one">Which of the following countries share a border with Germany?</string>

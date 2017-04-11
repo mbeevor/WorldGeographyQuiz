@@ -27,11 +27,12 @@ public class StartActivity extends AppCompatActivity {
      * The name entered is saved as a new intent to be recalled later.
      *
      */
+
     public void startQuiz(View view) {
         playerName = yourName.getText().toString();
 
         if (playerName.equals("")) {
-            Toast.makeText(this, "You must enter your name", Toast.LENGTH_SHORT).show();
+            yourName.setError(getString(R.string.name_error));
             return;
         }
         Intent proceedToMain = new Intent(this, MainActivity.class);

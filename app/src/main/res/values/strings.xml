@@ -4,6 +4,7 @@
     <string name="welcome_two">And other geography questions.</string>
     <string name="player_name">Enter your name to begin</string>
     <string name="name_hint">Your Name</string>
+    <string name="name_error">Please enter your name</string>
     <string name="entered_name"><xliff:g id="playerName" example="Matthew">%s</xliff:g></string>
     <string name="submit">Submit</string>
     <string name="hello">Hello</string>

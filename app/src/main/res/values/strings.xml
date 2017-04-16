@@ -11,6 +11,8 @@
     <string name="begin">Let us begin...</string>
     <string name="restart">Play Again</string>
     <string name="share">Share</string>
+    <string name="result">Answers</string>
+    <string name="view_result">View Answers</string>
 
     <string name="score_message">Your current score is </string>
     <string name="share_subject">Your World Geography Quiz Result</string>

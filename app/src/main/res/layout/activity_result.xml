@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/top_image"
+            style="@style/top_image"
+            android:src="@drawable/hungarymap" />
+
+        <TextView
+            style="@style/title"
+            android:text="@string/result" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_result_one"
+                style="@style/card_result_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/question"
+                        android:text="@string/question_one" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_one_answer_a" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_one_answer_c" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_result_two"
+                style="@style/card_result_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/question"
+                        android:text="@string/question_two" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_two_answer_b" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_result_three"
+                style="@style/card_result_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/question"
+                        android:text="@string/question_three" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_three_answer" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_result_four"
+                style="@style/card_result_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/question"
+                        android:text="@string/question_four" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_four_answer_a" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_result_five"
+                style="@style/card_result_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/question"
+                        android:text="@string/question_five" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_five_answer_b" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_result_six"
+                style="@style/card_result_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/question"
+                        android:text="@string/question_six" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_six_answer_a" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_six_answer_c" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_six_answer_f" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_six_answer_g" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_result_seven"
+                style="@style/card_result_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        style="@style/question"
+                        android:text="@string/question_seven" />
+
+                    <TextView
+                        style="@style/answer"
+                        android:text="@string/question_seven_answer" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <Button
+                style="@style/submit"
+                android:onClick="restart"
+                android:text="@string/restart" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

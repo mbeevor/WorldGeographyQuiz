@@ -252,6 +252,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * This method is called when the player clicks 'view answers'
+     *
+     */
+
+    public void viewResult(View view) {
+
+        Intent viewAnswers = new Intent(this, ResultActivity.class);
+        startActivity(viewAnswers);
+    }
+
+    /**
+     * This method is called when the player clicks 'play again'.
+     * @param view
+     */
+
     public void restart(View view) {
         score = 0;
         Intent startAgain = new Intent(this, StartActivity.class);

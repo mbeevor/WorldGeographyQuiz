@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -387,6 +385,12 @@
                     style="@style/sub_title"
                     android:text="@string/final_score_message" />
 
+                <Button
+                    android:id="@+id/view_result"
+                    style="@style/result"
+                    android:onClick="viewResult"
+                    android:text="@string/view_result" />
+
             </LinearLayout>
 
             <RelativeLayout style="@style/relative_layout">
@@ -397,9 +401,9 @@
                     android:onClick="share"
                     android:text="@string/share" />
 
-                <Button
+               <Button
                     android:id="@+id/restart"
-                    style="@style/submit"
+                    style="@style/restart"
                     android:onClick="restart"
                     android:text="@string/restart" />
 

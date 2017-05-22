@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         cardViewSeven = (CardView) findViewById(R.id.card_view_seven);
         cardViewLast = (CardView) findViewById(R.id.card_view_last);
 
-        //create Array of all cards; cardViewOne = 0 and so on. All cards hidden apart from cards 0 , i.e. cardViewOne //
+        //create Array of all cards; cardViewOne = 0 and so on. All cards hidden apart from currentQuestion card //
         cards = new CardView[] {cardViewOne, cardViewTwo, cardViewThree, cardViewFour, cardViewFive, cardViewSix, cardViewSeven, cardViewLast};
         for (int i = 0; i < 8; i++) {
             if (currentQuestion != i) {

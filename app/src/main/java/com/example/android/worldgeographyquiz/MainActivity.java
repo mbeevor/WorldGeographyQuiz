@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String SAVED_SCORE = "savedScore";
     public static final String SAVED_PROGRESS = "currentQuestion";
 
-    // Identifies all cards when app created //
+    // Identifies all cards when app created
     CardView cardViewOne;
     CardView cardViewTwo;
     CardView cardViewThree;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     CardView cardViewLast;
     CardView cards[];
 
-    // Find all views by ID //
+    // Find all views by ID
     TextView startTextView;
     CheckBox questionOneAnswerA;
     CheckBox questionOneAnswerB;
@@ -63,15 +63,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState !=null) {
+        if (savedInstanceState != null) {
             score = savedInstanceState.getInt(SAVED_SCORE, score);
             currentQuestion = savedInstanceState.getInt(SAVED_PROGRESS, currentQuestion);
         }
 
-        // restores player's name from StartActivity //
+        // restores player's name from StartActivity
         playerName = getIntent().getExtras().getString("playerName");
 
-        // Identifies all cards when app created //
+        // Identifies all cards when app created
         cardViewOne = (CardView) findViewById(R.id.card_view_one);
         cardViewTwo = (CardView) findViewById(R.id.card_view_two);
         cardViewThree = (CardView) findViewById(R.id.card_view_three);
@@ -81,13 +81,14 @@ public class MainActivity extends AppCompatActivity {
         cardViewSeven = (CardView) findViewById(R.id.card_view_seven);
         cardViewLast = (CardView) findViewById(R.id.card_view_last);
 
-        //create Array of all cards; cardViewOne = 0 and so on. All cards hidden apart from currentQuestion card //
-        cards = new CardView[] {cardViewOne, cardViewTwo, cardViewThree, cardViewFour, cardViewFive, cardViewSix, cardViewSeven, cardViewLast};
+        //create Array of all cards; cardViewOne = 0 and so on. All cards hidden apart from currentQuestion card
+        cards = new CardView[]{cardViewOne, cardViewTwo, cardViewThree, cardViewFour, cardViewFive, cardViewSix, cardViewSeven, cardViewLast};
         for (int i = 0; i < 8; i++) {
             if (currentQuestion != i) {
                 cards[i].setVisibility(View.GONE);
             }
-        } ;
+        }
+        ;
 
         // Find all views by ID //
         startTextView = (TextView) findViewById(R.id.start);
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         scoreImage = (ImageView) findViewById(R.id.score_image);
 
         // creates new String welcome message that recalls player's name //
-        String openingString = getString(R.string.hello) + ", " + getString(R.string.entered_name, playerName) + getString(R.string.begin);
+        String openingString = getString(R.string.hello) + " " + getString(R.string.entered_name, playerName) + ", " + getString(R.string.begin);
         startTextView.setText(openingString);
 
     }
@@ -126,8 +127,10 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        //update currentQuestion by 1 to hide current card and reveal next card
+        // hide current card, increase currentQuestion by one and show the next card
+        cards[currentQuestion].setVisibility(View.GONE);
         currentQuestion += 1;
+        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -138,8 +141,9 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        //update currentQuestion by 1 to hide current card and reveal next card
+        cards[currentQuestion].setVisibility(View.GONE);
         currentQuestion += 1;
+        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -151,8 +155,9 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        //update currentQuestion by 1 to hide current card and reveal next card
+        cards[currentQuestion].setVisibility(View.GONE);
         currentQuestion += 1;
+        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -163,8 +168,9 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        //update currentQuestion by 1 to hide current card and reveal next card
+        cards[currentQuestion].setVisibility(View.GONE);
         currentQuestion += 1;
+        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -175,8 +181,9 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        //update currentQuestion by 1 to hide current card and reveal next card
+        cards[currentQuestion].setVisibility(View.GONE);
         currentQuestion += 1;
+        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -190,8 +197,9 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        //update currentQuestion by 1 to hide current card and reveal next card
+        cards[currentQuestion].setVisibility(View.GONE);
         currentQuestion += 1;
+        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -202,10 +210,11 @@ public class MainActivity extends AppCompatActivity {
         if (questionSevenAnswerEditText.getText().toString().equals(getString(R.string.question_seven_answer))) {
             score += 10;
         }
-        //update currentQuestion by 1 to hide current card and reveal next card
+        cards[currentQuestion].setVisibility(View.GONE);
         currentQuestion += 1;
+        cards[currentQuestion].setVisibility(View.VISIBLE);
 
-        // final String to display final score //
+        // final String to display final score
 
 
         if (score <= 20) {
@@ -238,7 +247,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the player clicks 'view answers'
-     *
      */
 
     public void viewResult(View view) {
@@ -249,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the player clicks 'play again'.
+     *
      * @param view
      */
 

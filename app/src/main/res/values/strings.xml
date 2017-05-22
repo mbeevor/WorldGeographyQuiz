@@ -8,7 +8,7 @@
     <string name="entered_name"><xliff:g id="playerName" example="Matthew">%s</xliff:g></string>
     <string name="submit">Submit</string>
     <string name="hello">Hello</string>
-    <string name="begin">\, let us begin...</string>
+    <string name="begin">let us begin...</string>
     <string name="restart">Play Again</string>
     <string name="share">Share</string>
     <string name="result">Answers</string>
@@ -20,7 +20,7 @@
     <string name="thanks">Thanks for playing\!</string>
     <string name="final_score_message">Your final score is: </string>
     <string name="possible">of a possible 70.</string>
-    <string name="best">Well done\! You really know your geography\!</string>
+    <string name="best">Well done! You really know your geography!</string>
     <string name="okay">Good job\ - maybe have another go\?</string>
     <string name="worst">Perhaps geography isn\'t for you.</string>
 

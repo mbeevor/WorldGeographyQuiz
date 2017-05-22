@@ -126,10 +126,8 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        // new universal method that updates currentQuestion, hides current card and shows the next card //
-        cards[currentQuestion].setVisibility(View.GONE);
+        //update currentQuestion by 1 to hide current card and reveal next card
         currentQuestion += 1;
-        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -140,11 +138,8 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-
-        // new universal method that updates currentQuestion, hides current card and shows the next card //
-        cards[currentQuestion].setVisibility(View.GONE);
+        //update currentQuestion by 1 to hide current card and reveal next card
         currentQuestion += 1;
-        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -156,10 +151,8 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        // new universal method that updates currentQuestion, hides current card and shows the next card //
-        cards[currentQuestion].setVisibility(View.GONE);
+        //update currentQuestion by 1 to hide current card and reveal next card
         currentQuestion += 1;
-        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -170,10 +163,8 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        // new universal method that updates currentQuestion, hides current card and shows the next card //
-        cards[currentQuestion].setVisibility(View.GONE);
+        //update currentQuestion by 1 to hide current card and reveal next card
         currentQuestion += 1;
-        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -184,11 +175,8 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-
-        // new universal method that updates currentQuestion, hides current card and shows the next card //
-        cards[currentQuestion].setVisibility(View.GONE);
+        //update currentQuestion by 1 to hide current card and reveal next card
         currentQuestion += 1;
-        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -202,10 +190,8 @@ public class MainActivity extends AppCompatActivity {
             score += 10;
         }
         Toast.makeText(this, getString(R.string.score_message) + " " + score, Toast.LENGTH_SHORT).show();
-        // new universal method that updates currentQuestion, hides current card and shows the next card //
-        cards[currentQuestion].setVisibility(View.GONE);
+        //update currentQuestion by 1 to hide current card and reveal next card
         currentQuestion += 1;
-        cards[currentQuestion].setVisibility(View.VISIBLE);
     }
 
     /**
@@ -216,10 +202,8 @@ public class MainActivity extends AppCompatActivity {
         if (questionSevenAnswerEditText.getText().toString().equals(getString(R.string.question_seven_answer))) {
             score += 10;
         }
-        // new universal method that updates currentQuestion, hides current card and shows the next card //
-        cards[currentQuestion].setVisibility(View.GONE);
+        //update currentQuestion by 1 to hide current card and reveal next card
         currentQuestion += 1;
-        cards[currentQuestion].setVisibility(View.VISIBLE);
 
         // final String to display final score //
 

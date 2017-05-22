@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         scoreImage = (ImageView) findViewById(R.id.score_image);
 
         // creates new String welcome message that recalls player's name //
-        String openingString = getString(R.string.hello) + ", " + getString(R.string.entered_name, playerName) + " " + getString(R.string.begin);
+        String openingString = getString(R.string.hello) + ", " + getString(R.string.entered_name, playerName) + getString(R.string.begin);
         startTextView.setText(openingString);
 
     }

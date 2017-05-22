@@ -8,7 +8,7 @@
     <string name="entered_name"><xliff:g id="playerName" example="Matthew">%s</xliff:g></string>
     <string name="submit">Submit</string>
     <string name="hello">Hello</string>
-    <string name="begin">, let us begin...</string>
+    <string name="begin">\, let us begin...</string>
     <string name="restart">Play Again</string>
     <string name="share">Share</string>
     <string name="result">Answers</string>
